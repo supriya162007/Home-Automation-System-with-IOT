@@ -40,18 +40,42 @@ When we apply an active high signal to the signal pin of the relay module from a
 # CIRCUIT DIAGRAM:
 
 <img width="663" height="400" alt="image" src="https://github.com/user-attachments/assets/bfebc70d-25b4-4b4a-a7e1-2a02c09bf423" />
-
-
  
 # PROGRAM:
-
+```
+	#define BLYNK_PRINT Serial 
+	/* Fill-in your Template ID (only if using Blynk.Cloud) */ 
+	//#define BLYNK_TEMPLATE_ID   "YourTemplateID" 
+	#define BLYNK_TEMPLATE_ID "TMPL3KJXHJQJl" 
+	#define BLYNK_TEMPLATE_NAME "homeautomation" 
+	#define BLYNK_AUTH_TOKEN "i04tjmB3P94UGixnWX4eehmIEjAeyodb" 
+	#include <ESP8266WiFi.h> 
+	#include <BlynkSimpleEsp8266.h> 
+	// You should get Auth Token in the Blynk App. 
+	// Go to the Project Settings (nut icon). 
+	char auth[] = BLYNK_AUTH_TOKEN; 
+	// Your WiFi credentials. 
+	// Set password to "" for open networks. 
+	char ssid[] = "xxxxxxxx"; 
+	char pass[] = "xxxx"; 
+	void setup() 
+	{ 
+	  // Debug console 
+	  Serial.begin(9600); 
+	  Blynk.begin(auth, ssid, pass); 
+	  // You can also specify server: 
+	  //Blynk.begin(auth, ssid, pass, "blynk-cloud.com", 80); 
+	  //Blynk.begin(auth, ssid, pass, IPAddress(192,168,1,100), 8080); 
+	} 
+	void loop() 
+	{ 
+	  Blynk.run(); 
+	} 
+```
 
  
 # Output:
-
-
+<img width="336" height="182" alt="image" src="https://github.com/user-attachments/assets/bd34c1a6-8215-4b49-a23b-e351c721f703" />
 
 ## Result:
-
-
-
+Thus, Output has been verified.
